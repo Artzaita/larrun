@@ -2,19 +2,24 @@
 
 {% block title %}Hello StaticPagesController!{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/sites/larrun-prod/src/Controller/StaticPagesController.php'|file_link(0) }}">src/Controller/StaticPagesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/sites/larrun-prod/templates/static_pages/index.html.twig'|file_link(0) }}">templates/static_pages/index.html.twig</a></code></li>
-    </ul>
+{% block main %}
+<main>
+<div id="index">
+<h1>Bienvenue chez Larrun-Prod</h1>
+<div id="prez">
+<article>
+	<h2>Larrun, qu'est-ce que c'est?</h2>
+	<p>Larrun, ou la Rhune, est la montagne mythique du Pays Basque. C'est un témoin de l'histoire et de l'évolution de l'Homme.</p>
+	<p>Larrun domine son environnement et se distingue de presque tout le Pays Basque et même au-delà.</p>
+	<p>Des cromlechs aux relais radio, des troupeaux de pottok aux vagues de touristes, de la tradition à la modernité, tous et chacun se retrouvent à Larrun.</p>
+	<p>Larrun-Prod vous propose ainsi de créer <a href="prestations.php">"VOTRE site WEB à VOTRE image"</a>.</p>
+	<p>N'hésitez pas prendre <a href="contact.php">contact</a> avec nous pour établir le projet qui correspond à votre besoin.</p>
+</article>
+<aside>
+	<iframe id="fb_s" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flarrunprod%2F&tabs&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+	<iframe id="fb_l" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLarrun-Prod&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+</aside>
 </div>
+</div>
+</main>
 {% endblock %}
