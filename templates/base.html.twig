@@ -4,6 +4,12 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
+        	<!-- Appel de la police FontAwesome pour les icônes -->
+{# 			<link rel="stylesheet" type="text/css" href="{{asset('css/all.css')}}">
+ #}
+ 			<script src="https://use.fontawesome.com/452826394c.js"></script>
+			<!-- CSS PERSO -->
+			<!-- Appel de la feuille de style principale -->
         	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
         {% endblock %}
     </head>
@@ -14,7 +20,7 @@
 				<a href="{{path('app_home')}}"><img src="{{asset('img/logo.png')}}" alt="logo de larrun-prod représentant de profil la Rhune en vert, le ciel en bleu et cerclé de rouge" class="logo"></a>
 				<div id="nav-i">
 					<a href="{{path('app_home')}}"><i class="fas fa-home"></i></a>
-					<a href="realisations.php"><i class="fas fa-edit"></i></a>
+					<a href="{{path('app_real')}}"><i class="fas fa-edit"></i></a>
 					<a href="prestations.php"><i class="fas fa-sticky-note"></i></a>
 					<a href="contact.php"><i class="fas fa-mail-bulk"></i></a>
 				</div>
@@ -26,7 +32,7 @@
 				<ul>
 					<li><a href="{{path('app_home')}}"><img src="{{asset('img/logo.png')}}" alt="logo de larrun-prod représentant de profil la Rhune en vert, le ciel en bleu et cerclé de rouge" class="logo"></a></li>
 					<li><a href="{{path('app_home')}}">Accueil</a></li>
-					<li><a href="realisations.php">Réalisations</a></li>
+					<li><a href="{{path('app_real')}}">Réalisations</a></li>
 					<li><a href="prestations.php">Prestations</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>
@@ -41,7 +47,7 @@
 			<nav id="bottomnav">
 				<ul>
 					<li><a href="{{path('app_home')}}">Accueil</a></li>
-					<li><a href="realisations.php">Réalisations</a></li>
+					<li><a href="{{path('app_real')}}">Réalisations</a></li>
 					<li><a href="prestations.php">Prestations</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>

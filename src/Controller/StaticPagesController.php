@@ -12,8 +12,15 @@ class StaticPagesController extends AbstractController
      */
     public function index()
     {
-        return $this->render('static_pages/index.html.twig', [
-            'controller_name' => 'StaticPagesController',
-        ]);
+        return $this->render('static_pages/index.html.twig');
+    }
+
+
+    /**
+     *  @Route("/réalisations", name="app_real")
+     */
+    public function real()
+    {
+    	return $this->render('static_pages/réalisation.html.twig');
     }
 }
