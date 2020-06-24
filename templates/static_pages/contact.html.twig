@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Larrun-Prod | Réalisations{% endblock %}
+
+{% block main %}
+	<main>
+		<fieldset>
+			<legend><h1>Contactez-nous!</h1></legend>
+
+			{{ form_start(form) }}
+
+				{{ form_widget(form)}}
+
+
+				<input type="submit" name="submit" value="Envoyer ma demande">
+			{{ form_end(form)}}
+			<p>Consultez notre <a href='#'>politique de confidentialité</a>.</p>
+		</fieldset>
+
+	</main>
+{% endblock %}

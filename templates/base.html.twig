@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <!-- Mise en place de la Favicon du site -->
+		<link rel="icon" type="image/ico" href="{{asset('img/favicon.ico')}}" />
+
+
         {% block stylesheets %}
         	<!-- Appel de la police FontAwesome pour les icônes -->
 {# 			<link rel="stylesheet" type="text/css" href="{{asset('css/all.css')}}">
@@ -22,7 +27,7 @@
 					<a href="{{path('app_home')}}"><i class="fas fa-home"></i></a>
 					<a href="{{path('app_real')}}"><i class="fas fa-edit"></i></a>
 					<a href="prestations.php"><i class="fas fa-sticky-note"></i></a>
-					<a href="contact.php"><i class="fas fa-mail-bulk"></i></a>
+					<a href="{{path('app_contact')}}"><i class="fas fa-mail-bulk"></i></a>
 				</div>
 			</nav>
 		
@@ -34,7 +39,7 @@
 					<li><a href="{{path('app_home')}}">Accueil</a></li>
 					<li><a href="{{path('app_real')}}">Réalisations</a></li>
 					<li><a href="prestations.php">Prestations</a></li>
-					<li><a href="contact.php">Contact</a></li>
+					<li><a href="{{path('app_contact')}}">Contact</a></li>
 				</ul>
 			</nav>
 		
@@ -49,7 +54,7 @@
 					<li><a href="{{path('app_home')}}">Accueil</a></li>
 					<li><a href="{{path('app_real')}}">Réalisations</a></li>
 					<li><a href="prestations.php">Prestations</a></li>
-					<li><a href="contact.php">Contact</a></li>
+					<li><a href="{{path('app_contact')}}">Contact</a></li>
 				</ul>
 			</nav>
 		
