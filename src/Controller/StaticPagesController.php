@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -33,7 +34,7 @@ class StaticPagesController extends AbstractController
     /**
      *  @Route("/contact", name="app_contact", methods={"GET", "POST"})
      */
-    public function contact(Request $request)
+    public function contact(Request $request, MailerInterface $mailer)
     {
 
     	$form = $this->createFormBuilder()
@@ -125,6 +126,8 @@ class StaticPagesController extends AbstractController
 				->subject('Demande de contact depuis le site')
 				->text($body)
 			;
+
+            $mailer->send($email);
 
 			return $this->redirectToRoute('app_home');
 
