@@ -11,7 +11,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
-
+/*use Twig\Extra\String\StringExtension;
+*/
 class StaticPagesController extends AbstractController
 {
     /**
